@@ -1,13 +1,13 @@
-<h4>{{modelName}}</h4>
+<h4>{{this.spaceShip.modelName}}</h4>
 <div class="images">
-  <img [src]="imageUrl"/>
+  <img [src]="this.spaceShip.imageUrl"/>
 </div>
-<div class="health" [title]="'Zdrowie ' + health + '%'">
-  <div [style.width.%]="health"></div>
+<div class="health" [title]="'Zdrowie ' + this.spaceShip.health + '%'">
+  <div [style.width.%]="this.spaceShip.health"></div>
 </div>
-<div class="property" [ngClass]="{active:activeShields}">
+<div class="property" [ngClass]="{active:this.spaceShip.activeShields}">
   SHIELDS
 </div>
-<div class="property" [class.active]="activeWeapons">
+<div class="property" [class.active]="this.spaceShip.activeWeapons">
   WEAPONS
 </div>
