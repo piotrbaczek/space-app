@@ -1,0 +1,13 @@
+<h4>{{modelName}}</h4>
+<div class="images">
+  <img [src]="imageUrl"/>
+</div>
+<div class="health" [title]="'Zdrowie ' + health + '%'">
+  <div [style.width.%]="health"></div>
+</div>
+<div class="property" [ngClass]="{active:activeShields}">
+  SHIELDS
+</div>
+<div class="property" [class.active]="activeWeapons">
+  WEAPONS
+</div>
