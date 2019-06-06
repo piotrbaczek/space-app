@@ -29,3 +29,14 @@ img {
 .property.active {
   color: green;
 }
+
+.images {
+  position: relative;
+}
+
+.images .pilot {
+  position: absolute;
+  bottom: 40px;
+  right: -5px;
+  width: 30%;
+}
