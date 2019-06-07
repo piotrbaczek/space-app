@@ -1,7 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
-import {SpaceShip} from "../space-ship";
 import {Pilot} from "../pilot";
 import {PilotRoomComponent} from "../pilot-room/pilot-room.component";
+import {SpaceShipService} from "../space-ship.service";
+import {SpaceShip} from "../space-ship";
 
 @Component({
   selector: 'app-hangar',
@@ -10,10 +11,15 @@ import {PilotRoomComponent} from "../pilot-room/pilot-room.component";
 })
 export class HangarComponent {
   name: string = 'A11';
-  spaceShips: SpaceShip[] = [];
   selectedPilot: Pilot = null;
 
   @ViewChild(PilotRoomComponent, {static: false}) pilotRoom: PilotRoomComponent;
+
+  spaceShips = this.spaceShipService.hangarShips;
+
+  constructor(private spaceShipService: SpaceShipService) {
+
+  }
 
   assignPilot(spaceShip: SpaceShip) {
     spaceShip.pilot = this.selectedPilot;
@@ -27,9 +33,5 @@ export class HangarComponent {
 
   onSelected(pilot: Pilot) {
     this.selectedPilot = pilot;
-  }
-
-  addProducedShip(spaceShip: SpaceShip) {
-    this.spaceShips.push(spaceShip);
   }
 }
