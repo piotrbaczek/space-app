@@ -1,13 +1,19 @@
+import {PilotAttrs} from "./pilot/pilot-attrs";
+
 export class Pilot {
   firstName: string;
   lastName: string;
   imageUrl: string;
+  id: number;
 
   static defaultImageUrl = '/assets/pikachu.png';
 
-  constructor(fullName: string, imageUrl = Pilot.defaultImageUrl) {
-    this.fullName = fullName;
-    this.imageUrl = imageUrl;
+  constructor(attrs: Partial<PilotAttrs> = {}) {
+    this.id = attrs.id;
+    this.firstName = attrs.firstName;
+    this.lastName = attrs.lastName;
+    this.imageUrl = attrs.imageUrl || Pilot.defaultImageUrl;
+    this.fullName = attrs.firstName + ' ' + attrs.lastName;
   }
 
   get fullName(): string {

@@ -26,7 +26,7 @@ export class EngineersRoomComponent {
       validators: [Validators.required, Validators.min(1), Validators.max(5)]
     })
   });
-  
+
   shipsCount = this.spaceShipService.hangarShips.pipe(
     map((ships) => ships.length)
   );
