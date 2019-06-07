@@ -16,3 +16,6 @@
   <img class="pilot" [title]="spaceShip.pilot.fullName" [alt]="spaceShip.pilot.fullName" *ngIf="spaceShip.pilot"
        [src]="spaceShip.pilot.imageUrl"/>
 </div>
+<div class="actions">
+  <ng-content></ng-content>
+</div>
