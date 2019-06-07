@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SpaceShipComponent } from './space-ship.component';
+import {SpaceShipComponent} from './space-ship.component';
 
 describe('SpaceShipComponent', () => {
   let component: SpaceShipComponent;
