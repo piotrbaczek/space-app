@@ -14,8 +14,10 @@ export class PilotService {
   }
 
   getPilots(): Observable<Pilot[]> {
-    return this.http.get<PilotAttrs[]>('/api/pilots').pipe(
-      map((data) => data.map((pilotAttrs) => new Pilot(pilotAttrs)))
+    return this.http.get<PilotAttrs[]>('/api/pilots', {observe: 'response'}).pipe(
+      map((data) => {
+        return data.body.map((attrs) => new Pilot(attrs));
+      })
     );
   }
 }
