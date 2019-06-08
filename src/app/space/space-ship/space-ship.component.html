@@ -6,15 +6,17 @@
   <div [style.width.%]="this.spaceShip.health"></div>
 </div>
 <div class="property" [ngClass]="{active:this.spaceShip.activeShields}">
+  {{spaceShip.activeShields | ticked}}
   SHIELDS
 </div>
 <div class="property" [class.active]="this.spaceShip.activeWeapons">
+  {{spaceShip.activeWeapons | ticked}}
   WEAPONS
 </div>
 <div class="images">
   <!-- ... -->
   <img class="pilot" [title]="spaceShip.pilot.fullName" [alt]="spaceShip.pilot.fullName" *ngIf="spaceShip.pilot"
-       [src]="spaceShip.pilot.imageUrl"/>
+       [src]="spaceShip.pilot.imageUrl" appSpaceImage/>
 </div>
 <div class="actions">
   <ng-content></ng-content>
