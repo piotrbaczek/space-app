@@ -20,4 +20,10 @@ export class PilotService {
       })
     );
   }
+
+  getPilot(id: number) {
+    return this.http.get<PilotAttrs>('/api/pilots/' + id).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
+  }
 }

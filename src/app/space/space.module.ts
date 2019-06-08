@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {EngineersRoomComponent} from './engineers-room/engineers-room.component';
 import {SharedModule} from "../shared/shared.module";
 import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
+import { PilotFormComponent } from './pilot-form/pilot-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { DestructionRoomComponent } from './destruction-room/destruction-room.co
     PilotRoomComponent,
     EngineersRoomComponent,
     DestructionRoomComponent,
-
+    PilotFormComponent,
   ],
   imports: [
     CommonModule,
