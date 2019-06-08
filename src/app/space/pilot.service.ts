@@ -26,4 +26,20 @@ export class PilotService {
       map((pilotAttrs) => new Pilot(pilotAttrs))
     );
   }
+
+  private createPilot(data: PilotAttrs): Observable<Pilot> {
+    return this.http.post<PilotAttrs>('/api/pilots', data).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
+  }
+
+  private updatePilot(data: PilotAttrs): Observable<Pilot> {
+    return this.http.put<PilotAttrs>('/api/pilots/' + data.id, data).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
+  }
+
+  savePilot(pilotAttrs: PilotAttrs): Observable<Pilot> {
+    return this.updatePilot(pilotAttrs);
+  }
 }

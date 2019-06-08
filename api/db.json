@@ -3,7 +3,7 @@
     {
       "id": 1,
       "firstName": "Lee",
-      "lastName": "Adama",
+      "lastName": "Bruce",
       "imageUrl": "/assets/pikachu.png"
     },
     {
@@ -17,6 +17,17 @@
       "firstName": "Karl",
       "lastName": "Ahathon",
       "imageUrl": null
+    }
+  ],
+  "forbidden-names": [
+    {
+      "name": "Maruda"
+    },
+    {
+      "name": "Ciamajda"
+    },
+    {
+      "name": "Gapcio"
     }
   ]
 }
