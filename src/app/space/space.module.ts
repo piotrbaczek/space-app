@@ -25,9 +25,7 @@ import {SharedModule} from "../shared/shared.module";
     ReactiveFormsModule,
     SharedModule,
   ],
-  exports: [
-    HangarComponent
-  ],
+  exports: [],
 })
 export class SpaceModule {
 }
