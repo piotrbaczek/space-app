@@ -6,18 +6,20 @@ import {PilotService} from '../pilot.service';
 import {PilotValidators} from '../pilot-validators';
 
 @Component({
-    selector: 'app-pilot-form',
-    templateUrl: './pilot-form.component.html',
-    styleUrls: ['./pilot-form.component.css'],
-    standalone: false
+  selector: 'app-pilot-form',
+  templateUrl: './pilot-form.component.html',
+  styleUrls: ['./pilot-form.component.css'],
+  standalone: false
 })
 export class PilotFormComponent implements OnInit {
 
   form: UntypedFormGroup;
 
-  constructor(private route: ActivatedRoute,
-              private pilotService: PilotService,
-              private router: Router) {
+  constructor(
+    private route: ActivatedRoute,
+    private pilotService: PilotService,
+    private router: Router
+  ) {
   }
 
   save(): void {
