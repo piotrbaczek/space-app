@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SpaceShipService} from "../space-ship.service";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-destruction-room',
@@ -11,7 +11,7 @@ export class DestructionRoomComponent implements OnInit {
 
   spaceShips = this.spaceShipService.hangarShips;
 
-  shipIndexControl = new FormControl(null);
+  shipIndexControl = new UntypedFormControl(null);
 
   constructor(private spaceShipService: SpaceShipService) {
   }
