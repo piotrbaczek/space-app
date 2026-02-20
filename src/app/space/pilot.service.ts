@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {PilotAttrs} from "./pilot/pilot-attrs";
 import {Pilot} from "./pilot";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 import {map} from "rxjs/operators";
 
 @Injectable({
@@ -14,17 +14,19 @@ export class PilotService {
   }
 
   getPilots(): Observable<Pilot[]> {
-    return this.http.get<PilotAttrs[]>('/api/pilots', {observe: 'response'}).pipe(
-      map((data) => {
-        return data.body.map((attrs) => new Pilot(attrs));
-      })
-    );
+    return of([]);
+    // return this.http.get<PilotAttrs[]>('/api/pilots', {observe: 'response'}).pipe(
+    //   map((data) => {
+    //     return data.body.map((attrs) => new Pilot(attrs));
+    //   })
+    // );
   }
 
   getPilot(id: number) {
-    return this.http.get<PilotAttrs>('/api/pilots/' + id).pipe(
-      map((pilotAttrs) => new Pilot(pilotAttrs))
-    );
+    return of(new Pilot({id: 1, firstName: 'Piotr', lastName: 'Bączek'}));
+    // return this.http.get<PilotAttrs>('/api/pilots/' + id).pipe(
+    //   map((pilotAttrs) => new Pilot(pilotAttrs))
+    // );
   }
 
   private createPilot(data: PilotAttrs): Observable<Pilot> {

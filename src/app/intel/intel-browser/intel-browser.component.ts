@@ -8,9 +8,9 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 })
 export class IntelBrowserComponent implements OnInit {
 
-  private source: SafeResourceUrl = null;
+  public source: SafeResourceUrl = null;
 
-  private options = [
+  public options = [
     {name: 'ESA', url: 'http://www.esa.int/ESA'},
     {name: 'POLSA', url: 'https://www.polsa.gov.pl/pl'}
   ];

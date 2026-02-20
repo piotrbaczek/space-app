@@ -12,7 +12,7 @@ import {OrderFormValue} from "../order-form-value";
   styleUrls: ['./engineers-room.component.css']
 })
 export class EngineersRoomComponent {
-  private isProducing: boolean;
+  public isProducing: boolean;
   spaceShipTypes: ShipType[] = [
     {label: 'Fighter', value: SpaceShipType.Fighter},
     {label: 'Bomber', value: SpaceShipType.Bomber}
