@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {PilotAttrs} from "./pilot/pilot-attrs";
 import {Pilot} from "./pilot";
 import {Observable, of} from "rxjs";

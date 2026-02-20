@@ -3,25 +3,30 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {A2sCommModule} from 'a2s-comm';
 import {SpaceModule} from './space/space.module';
-import {HttpClientModule} from '@angular/common/http';
-import { BlackHoleComponent } from './black-hole/black-hole.component';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+import {BlackHoleComponent} from './black-hole/black-hole.component';
+import {A2sCommComponent} from 'a2s-comm';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    BlackHoleComponent
-  ],
-  imports: [
-    BrowserModule,
-    A2sCommModule,
-    SpaceModule,
-    HttpClientModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule(
+  {
+    declarations: [
+      AppComponent,
+      BlackHoleComponent
+    ],
+    bootstrap: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      SpaceModule,
+      AppRoutingModule,
+      A2sCommComponent
+    ],
+    providers: [
+      provideHttpClient(withInterceptorsFromDi())
+    ]
+  }
+)
 export class AppModule {
 }
