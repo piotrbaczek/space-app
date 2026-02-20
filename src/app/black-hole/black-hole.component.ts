@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-black-hole',
-  templateUrl: './black-hole.component.html',
-  styleUrls: ['./black-hole.component.css']
+    selector: 'app-black-hole',
+    templateUrl: './black-hole.component.html',
+    styleUrls: ['./black-hole.component.css'],
+    standalone: false
 })
 export class BlackHoleComponent implements OnInit {
 

@@ -3,9 +3,10 @@ import {SpaceShipService} from "../space-ship.service";
 import {UntypedFormControl} from "@angular/forms";
 
 @Component({
-  selector: 'app-destruction-room',
-  templateUrl: './destruction-room.component.html',
-  styleUrls: ['./destruction-room.component.css']
+    selector: 'app-destruction-room',
+    templateUrl: './destruction-room.component.html',
+    styleUrls: ['./destruction-room.component.css'],
+    standalone: false
 })
 export class DestructionRoomComponent implements OnInit {
 

@@ -7,9 +7,10 @@ import {map} from "rxjs/operators";
 import {OrderFormValue} from "../order-form-value";
 
 @Component({
-  selector: 'app-engineers-room',
-  templateUrl: './engineers-room.component.html',
-  styleUrls: ['./engineers-room.component.css']
+    selector: 'app-engineers-room',
+    templateUrl: './engineers-room.component.html',
+    styleUrls: ['./engineers-room.component.css'],
+    standalone: false
 })
 export class EngineersRoomComponent {
   public isProducing: boolean;

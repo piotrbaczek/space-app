@@ -1,7 +1,8 @@
 import {Directive, HostBinding, HostListener} from '@angular/core';
 
 @Directive({
-  selector: '[appSpaceImage]'
+    selector: '[appSpaceImage]',
+    standalone: false
 })
 export class SpaceImageDirective {
 
