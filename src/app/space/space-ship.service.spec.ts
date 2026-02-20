@@ -6,7 +6,7 @@ describe('SpaceShipService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SpaceShipService = TestBed.get(SpaceShipService);
+    const service: SpaceShipService = TestBed.inject(SpaceShipService);
     expect(service).toBeTruthy();
   });
 });

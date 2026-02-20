@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, provideExperimentalZonelessChangeDetection} from '@angular/core';
+import {NgModule, provideZonelessChangeDetection} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SpaceModule} from './space/space.module';
@@ -24,7 +24,7 @@ import {A2sCommComponent} from 'a2s-comm';
     ],
     providers: [
       provideHttpClient(withInterceptorsFromDi()),
-      provideExperimentalZonelessChangeDetection(),
+      provideZonelessChangeDetection(),
     ]
   }
 )
