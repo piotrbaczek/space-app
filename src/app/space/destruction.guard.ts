@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import {SpaceShipService} from "./space-ship.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class DestructionGuard implements CanActivate {
+export class DestructionGuard  {
   constructor(private spaceShipService: SpaceShipService,
               private router: Router) {
   }
