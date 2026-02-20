@@ -13,7 +13,7 @@ export class HangarComponent {
   name: string = 'A11';
   selectedPilot: Pilot = null;
 
-  @ViewChild(PilotRoomComponent, {static: false}) pilotRoom: PilotRoomComponent;
+  @ViewChild(PilotRoomComponent) pilotRoom: PilotRoomComponent;
 
   spaceShips = this.spaceShipService.hangarShips;
 
