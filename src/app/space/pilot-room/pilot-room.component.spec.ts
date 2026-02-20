@@ -1,17 +1,21 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PilotRoomComponent} from './pilot-room.component';
+import {provideZonelessChangeDetection} from '@angular/core';
 
 describe('PilotRoomComponent', () => {
   let component: PilotRoomComponent;
   let fixture: ComponentFixture<PilotRoomComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ PilotRoomComponent ]
+      declarations: [PilotRoomComponent],
+      providers: [
+        provideZonelessChangeDetection(),
+      ]
     })
-    .compileComponents();
-  }));
+      .compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PilotRoomComponent);

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
-import {map} from "rxjs/operators";
-import {PilotService} from "../pilot.service";
-import {PilotValidators} from "../pilot-validators";
+import {ActivatedRoute, Router} from '@angular/router';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
+import {map} from 'rxjs/operators';
+import {PilotService} from '../pilot.service';
+import {PilotValidators} from '../pilot-validators';
 
 @Component({
     selector: 'app-pilot-form',

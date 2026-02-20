@@ -1,9 +1,9 @@
 import {PilotValidators} from './pilot-validators';
-import {UntypedFormControl} from "@angular/forms";
-import {ajax, AjaxResponse} from "rxjs/ajax";
-import {of} from "rxjs";
+import {UntypedFormControl} from '@angular/forms';
+import {ajax, AjaxResponse} from 'rxjs/ajax';
+import {of} from 'rxjs';
 
-fdescribe('PilotValidators', () => {
+describe('PilotValidators', () => {
   it('should create an instance', () => {
     expect(new PilotValidators()).toBeTruthy();
   });

@@ -1,17 +1,24 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PilotFormComponent } from './pilot-form.component';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 describe('PilotFormComponent', () => {
   let component: PilotFormComponent;
   let fixture: ComponentFixture<PilotFormComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ PilotFormComponent ]
+      declarations: [ PilotFormComponent ],
+      providers: [
+        provideZonelessChangeDetection(),
+      ],
+      imports: [
+        RouterModule.forRoot([]),
+      ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PilotFormComponent);

@@ -1,17 +1,20 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {EngineersRoomComponent} from './engineers-room.component';
+import {provideZonelessChangeDetection} from '@angular/core';
 
 describe('EngineersRoomComponent', () => {
   let component: EngineersRoomComponent;
   let fixture: ComponentFixture<EngineersRoomComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ EngineersRoomComponent ]
+      declarations: [ EngineersRoomComponent ],
+      providers: [
+        provideZonelessChangeDetection(),
+      ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(EngineersRoomComponent);
