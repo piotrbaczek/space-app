@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {EngineersRoomComponent} from './engineers-room.component';
 import {provideZonelessChangeDetection} from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms';
 
 describe('EngineersRoomComponent', () => {
   let component: EngineersRoomComponent;
@@ -11,6 +12,9 @@ describe('EngineersRoomComponent', () => {
       declarations: [ EngineersRoomComponent ],
       providers: [
         provideZonelessChangeDetection(),
+      ],
+      imports: [
+        ReactiveFormsModule,
       ]
     })
     .compileComponents();

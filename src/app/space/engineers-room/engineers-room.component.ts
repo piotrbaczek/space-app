@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {SpaceShipType} from "../space-ship-type.enum";
-import {ShipType} from "../ship-type";
-import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
-import {SpaceShipService} from "../space-ship.service";
-import {map} from "rxjs/operators";
-import {OrderFormValue} from "../order-form-value";
+import {SpaceShipType} from '../space-ship-type.enum';
+import {ShipType} from '../ship-type';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
+import {SpaceShipService} from '../space-ship.service';
+import {map} from 'rxjs/operators';
+import {OrderFormValue} from '../order-form-value';
 
 @Component({
     selector: 'app-engineers-room',

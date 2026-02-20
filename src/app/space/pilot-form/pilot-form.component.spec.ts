@@ -1,7 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PilotFormComponent } from './pilot-form.component';
-import { provideZonelessChangeDetection } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {PilotFormComponent} from './pilot-form.component';
+import {provideZonelessChangeDetection} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {PilotResolver} from '../pilot.resolver';
 
 describe('PilotFormComponent', () => {
   let component: PilotFormComponent;
@@ -9,15 +10,21 @@ describe('PilotFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ PilotFormComponent ],
+      declarations: [PilotFormComponent],
       providers: [
         provideZonelessChangeDetection(),
       ],
       imports: [
-        RouterModule.forRoot([]),
+        RouterModule.forRoot([
+          {
+            path: 'space/pilots/:id',
+            component: PilotFormComponent,
+            resolve: {pilot: PilotResolver}
+          },
+        ]),
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

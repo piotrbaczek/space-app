@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SpaceShipService} from "../space-ship.service";
-import {UntypedFormControl} from "@angular/forms";
+import {SpaceShipService} from '../space-ship.service';
+import {UntypedFormControl} from '@angular/forms';
 
 @Component({
     selector: 'app-destruction-room',

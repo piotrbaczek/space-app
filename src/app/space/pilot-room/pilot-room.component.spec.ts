@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-
-import {PilotRoomComponent} from './pilot-room.component';
-import {provideZonelessChangeDetection} from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PilotRoomComponent } from './pilot-room.component';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 describe('PilotRoomComponent', () => {
   let component: PilotRoomComponent;
@@ -9,18 +9,23 @@ describe('PilotRoomComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PilotRoomComponent],
+      declarations: [
+        PilotRoomComponent
+      ],
       providers: [
         provideZonelessChangeDetection(),
+      ],
+      imports: [
+        RouterModule.forRoot([])
       ]
     })
       .compileComponents();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(PilotRoomComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

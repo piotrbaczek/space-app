@@ -2,12 +2,14 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { provideZonelessChangeDetection } from '@angular/core';
+import { A2sCommComponent } from 'a2s-comm';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([])
+        RouterModule.forRoot([]),
+        A2sCommComponent,
       ],
       declarations: [
         AppComponent
