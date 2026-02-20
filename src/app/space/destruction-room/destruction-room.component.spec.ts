@@ -1,17 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DestructionRoomComponent } from './destruction-room.component';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('DestructionRoomComponent', () => {
   let component: DestructionRoomComponent;
   let fixture: ComponentFixture<DestructionRoomComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ DestructionRoomComponent ]
+      declarations: [ DestructionRoomComponent ],
+      providers: [
+        provideZonelessChangeDetection()
+      ],
+      imports: [
+        ReactiveFormsModule,
+      ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DestructionRoomComponent);

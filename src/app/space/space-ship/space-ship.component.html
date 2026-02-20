@@ -15,8 +15,10 @@
 </div>
 <div class="images">
   <!-- ... -->
-  <img class="pilot" [title]="spaceShip.pilot.fullName" [alt]="spaceShip.pilot.fullName" *ngIf="spaceShip.pilot"
-       [src]="spaceShip.pilot.imageUrl" appSpaceImage/>
+  @if (spaceShip.pilot) {
+    <img class="pilot" [title]="spaceShip.pilot.fullName" [alt]="spaceShip.pilot.fullName"
+      [src]="spaceShip.pilot.imageUrl" appSpaceImage/>
+  }
 </div>
 <div class="actions">
   <ng-content></ng-content>

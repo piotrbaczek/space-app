@@ -1,22 +1,36 @@
-import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
-import {SpaceShipService} from "./space-ship.service";
+import { Injectable } from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  GuardResult,
+  MaybeAsync,
+  RedirectCommand,
+  Router,
+  RouterStateSnapshot
+} from '@angular/router';
+import { SpaceShipService } from './space-ship.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DestructionGuard implements CanActivate {
-  constructor(private spaceShipService: SpaceShipService,
-              private router: Router) {
+export class DestructionGuard {
+  constructor(
+    private spaceShipService: SpaceShipService,
+    private router: Router
+  ) {
   }
 
-  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  public canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
     const hasSpaceShips = this.spaceShipService.hangarShips.getValue().length > 0;
-    if (!hasSpaceShips) {
-      alert('Nie ma statków w hangarze!');
-      this.router.navigateByUrl('/');
-    }
-    return hasSpaceShips;
-  }
 
+    if (hasSpaceShips) {
+      return true;
+    }
+
+
+    alert('Nie ma statków w hangarze!');
+
+    return new RedirectCommand(this.router.parseUrl('/'), {
+      skipLocationChange: true
+    });
+  }
 }

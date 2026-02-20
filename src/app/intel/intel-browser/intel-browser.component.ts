@@ -2,15 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-intel-browser',
-  templateUrl: './intel-browser.component.html',
-  styleUrls: ['./intel-browser.component.css']
+    selector: 'app-intel-browser',
+    templateUrl: './intel-browser.component.html',
+    styleUrls: ['./intel-browser.component.css'],
+    standalone: false
 })
 export class IntelBrowserComponent implements OnInit {
 
-  private source: SafeResourceUrl = null;
+  public source: SafeResourceUrl = null;
 
-  private options = [
+  public options = [
     {name: 'ESA', url: 'http://www.esa.int/ESA'},
     {name: 'POLSA', url: 'https://www.polsa.gov.pl/pl'}
   ];

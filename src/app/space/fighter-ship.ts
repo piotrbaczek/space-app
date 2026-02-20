@@ -1,5 +1,5 @@
-import {SpaceShip} from "./space-ship";
-import {Pilot} from "./pilot";
+import {SpaceShip} from './space-ship';
+import {Pilot} from './pilot';
 
 export class FighterShip extends SpaceShip {
 

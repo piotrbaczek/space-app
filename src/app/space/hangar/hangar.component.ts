@@ -5,15 +5,16 @@ import {SpaceShipService} from "../space-ship.service";
 import {SpaceShip} from "../space-ship";
 
 @Component({
-  selector: 'app-hangar',
-  templateUrl: './hangar.component.html',
-  styleUrls: ['./hangar.component.css']
+    selector: 'app-hangar',
+    templateUrl: './hangar.component.html',
+    styleUrls: ['./hangar.component.css'],
+    standalone: false
 })
 export class HangarComponent {
   name: string = 'A11';
   selectedPilot: Pilot = null;
 
-  @ViewChild(PilotRoomComponent, {static: false}) pilotRoom: PilotRoomComponent;
+  @ViewChild(PilotRoomComponent) pilotRoom: PilotRoomComponent;
 
   spaceShips = this.spaceShipService.hangarShips;
 

@@ -1,12 +1,13 @@
-import {PilotAttrs} from "./pilot/pilot-attrs";
+import {PilotAttrs} from './pilot/pilot-attrs';
 
 export class Pilot {
-  firstName: string;
-  lastName: string;
-  imageUrl: string;
-  id: number;
 
-  static defaultImageUrl = '/assets/pikachu.png';
+  public static defaultImageUrl = '/assets/pikachu.png';
+
+  public firstName: string;
+  public lastName: string;
+  public imageUrl: string;
+  public id: number;
 
   constructor(attrs: Partial<PilotAttrs> = {}) {
     this.id = attrs.id;

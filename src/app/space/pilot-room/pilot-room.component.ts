@@ -3,9 +3,10 @@ import {Pilot} from "../pilot";
 import {PilotService} from "../pilot.service";
 
 @Component({
-  selector: 'app-pilot-room',
-  templateUrl: './pilot-room.component.html',
-  styleUrls: ['./pilot-room.component.css']
+    selector: 'app-pilot-room',
+    templateUrl: './pilot-room.component.html',
+    styleUrls: ['./pilot-room.component.css'],
+    standalone: false
 })
 export class PilotRoomComponent implements OnInit {
   pilots: Pilot[] = [];

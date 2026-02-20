@@ -1,4 +1,4 @@
-import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 import {Pilot} from "./pilot";
 import {Observable, of} from "rxjs";
 import {PilotService} from "./pilot.service";
@@ -7,7 +7,7 @@ import {Injectable} from "@angular/core";
 @Injectable({
   providedIn: 'root'
 })
-export class PilotResolver implements Resolve<Pilot> {
+export class PilotResolver  {
 
   constructor(private pilotService: PilotService) {
   }

@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HangarComponent} from "./hangar/hangar.component";
-import {EngineersRoomComponent} from "./engineers-room/engineers-room.component";
-import {DestructionRoomComponent} from "./destruction-room/destruction-room.component";
-import {DestructionGuard} from "./destruction.guard";
-import {PilotFormComponent} from "./pilot-form/pilot-form.component";
-import {PilotResolver} from "./pilot.resolver";
+import {HangarComponent} from './hangar/hangar.component';
+import {EngineersRoomComponent} from './engineers-room/engineers-room.component';
+import {DestructionRoomComponent} from './destruction-room/destruction-room.component';
+import {DestructionGuard} from './destruction.guard';
+import {PilotFormComponent} from './pilot-form/pilot-form.component';
+import {PilotResolver} from './pilot.resolver';
 
 const routes: Routes = [
   {

@@ -1,17 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IntelBrowserComponent } from './intel-browser.component';
+import {provideZonelessChangeDetection} from '@angular/core';
 
 describe('IntelBrowserComponent', () => {
   let component: IntelBrowserComponent;
   let fixture: ComponentFixture<IntelBrowserComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntelBrowserComponent ]
+      declarations: [ IntelBrowserComponent ],
+      providers: [
+        provideZonelessChangeDetection()
+      ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IntelBrowserComponent);

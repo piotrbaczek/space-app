@@ -1,17 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BlackHoleComponent } from './black-hole.component';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('BlackHoleComponent', () => {
   let component: BlackHoleComponent;
   let fixture: ComponentFixture<BlackHoleComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlackHoleComponent ]
+      declarations: [ BlackHoleComponent ],
+      providers: [
+        provideZonelessChangeDetection(),
+      ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BlackHoleComponent);

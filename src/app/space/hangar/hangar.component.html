@@ -1,10 +1,16 @@
 <div class="row">
   <div class="col-6">
     <h1>Hangar {{name}}</h1>
-    <app-space-ship *ngFor="let spaceShip of spaceShips | async" [spaceShip]="spaceShip">
-      <button *ngIf="selectedPilot && !spaceShip.pilot" (click)="assignPilot(spaceShip)">Pilotuj</button>
-      <button *ngIf="spaceShip.pilot" (click)="unAssignPilot(spaceShip)">Opuść</button>
-    </app-space-ship>
+    @for (spaceShip of spaceShips | async; track spaceShip) {
+      <app-space-ship [spaceShip]="spaceShip">
+        @if (selectedPilot && !spaceShip.pilot) {
+          <button (click)="assignPilot(spaceShip)">Pilotuj</button>
+        }
+        @if (spaceShip.pilot) {
+          <button (click)="unAssignPilot(spaceShip)">Opuść</button>
+        }
+      </app-space-ship>
+    }
   </div>
   <div class="col-6">
     <app-pilot-room (selected)="onSelected($event)"></app-pilot-room>
