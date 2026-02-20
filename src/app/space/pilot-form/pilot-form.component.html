@@ -4,23 +4,31 @@
   <div class="control-group">
     <label class="control-label">Imię:</label>
     <input type="text" formControlName="firstName"/>
-    <span *ngIf="form.get('firstName').hasError('required') && form.get('firstName').touched" class="error">
-      podaj wartość
-    </span>
-    <span *ngIf="form.get('firstName').hasError('pilotName')" class="error">
-      zacznij wielką literą
-    </span>
+    @if (form.get('firstName').hasError('required') && form.get('firstName').touched) {
+      <span class="error">
+        podaj wartość
+      </span>
+    }
+    @if (form.get('firstName').hasError('pilotName')) {
+      <span class="error">
+        zacznij wielką literą
+      </span>
+    }
   </div>
 
   <div class="control-group">
     <label class="control-label">Nazwisko:</label>
     <input type="text" formControlName="lastName"/>
-    <span *ngIf="form.get('lastName').hasError('required') && form.get('lastName').touched" class="error">
-      podaj wartość
-    </span>
-    <span *ngIf="form.get('lastName').hasError('pilotForbidden')" class="error">
-      zakazane nazwisko
-    </span>
+    @if (form.get('lastName').hasError('required') && form.get('lastName').touched) {
+      <span class="error">
+        podaj wartość
+      </span>
+    }
+    @if (form.get('lastName').hasError('pilotForbidden')) {
+      <span class="error">
+        zakazane nazwisko
+      </span>
+    }
   </div>
 
   <div class="control-group">
